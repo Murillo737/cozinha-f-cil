@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b4513">
+  <meta name="description" content="Cozinha Fácil - aplicativo de receitas">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Cozinha Fácil</title>
+</head>
+<body>
+  <header class="topo">
+    <h1>Cozinha Fácil</h1>
+    <p>Receitas simples para todos os dias</p>
+  </header>
+
+  <main>
+    <section class="receita" aria-live="polite">
+      <div class="imagem-receita" aria-hidden="true">🍝</div>
+
+      <div class="conteudo">
+        <h2 id="nome-receita">Macarrão ao molho de tomate</h2>
+
+        <p id="descricao-receita">
+          Uma receita rápida, simples e saborosa para o almoço ou jantar.
+        </p>
+
+        <h3>Ingredientes</h3>
+        <ul id="ingredientes">
+          <li>250 g de macarrão</li>
+          <li>2 tomates</li>
+          <li>1 colher de sopa de azeite</li>
+          <li>1 dente de alho</li>
+          <li>Sal a gosto</li>
+        </ul>
+
+        <h3>Modo de preparo</h3>
+        <p id="modo-preparo">
+          Cozinhe o macarrão. Prepare o molho com tomate, alho e azeite.
+          Misture o molho ao macarrão e sirva.
+        </p>
+      </div>
+    </section>
+
+    <section class="acoes">
+      <button id="anterior" type="button">←</button>
+      <button id="proxima" type="button">→</button>
+      <button id="salvar" type="button">♡</button>
+      <button id="compartilhar" type="button">↗</button>
+    </section>
+
+    <section class="busca">
+      <input id="busca" type="search" placeholder="Digite uma receita">
+      <button id="buscar" type="button">🔍</button>
+    </section>
+
+    <p id="mensagem" class="mensagem" role="status"></p>
+  </main>
+
+  <footer>
+    <p>Cozinha Fácil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
