@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#8b4513">
-  <meta name="description" content="Cozinha Fácil - aplicativo de receitas">
+  <meta name="description" content="Cozinha Fácil - aplicativo de receitas inclusivo">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
   <title>Cozinha Fácil</title>
@@ -16,43 +16,36 @@
   </header>
 
   <main>
+    <!-- O aria-live garante que mudanças no conteúdo sejam anunciadas pelo leitor de tela -->
     <section class="receita" aria-live="polite">
-      <div class="imagem-receita" aria-hidden="true">🍝</div>
+      <div class="imagem-receita" role="img" id="imagem-receita"></div>
 
       <div class="conteudo">
-        <h2 id="nome-receita">Macarrão ao molho de tomate</h2>
+        <h2 id="nome-receita"></h2>
 
-        <p id="descricao-receita">
-          Uma receita rápida, simples e saborosa para o almoço ou jantar.
-        </p>
+        <p id="descricao-receita"></p>
 
         <h3>Ingredientes</h3>
-        <ul id="ingredientes">
-          <li>250 g de macarrão</li>
-          <li>2 tomates</li>
-          <li>1 colher de sopa de azeite</li>
-          <li>1 dente de alho</li>
-          <li>Sal a gosto</li>
-        </ul>
+        <ul id="ingredientes"></ul>
 
         <h3>Modo de preparo</h3>
-        <p id="modo-preparo">
-          Cozinhe o macarrão. Prepare o molho com tomate, alho e azeite.
-          Misture o molho ao macarrão e sirva.
-        </p>
+        <p id="modo-preparo"></p>
       </div>
     </section>
 
+    <!-- Botões com aria-label explícitos para leitores de tela e comandos de voz -->
     <section class="acoes">
-      <button id="anterior" type="button">←</button>
-      <button id="proxima" type="button">→</button>
-      <button id="salvar" type="button">♡</button>
-      <button id="compartilhar" type="button">↗</button>
+      <button id="anterior" type="button" aria-label="Ver receita anterior">←</button>
+      <button id="proxima" type="button" aria-label="Ver próxima receita">→</button>
+      <button id="salvar" type="button" aria-label="Adicionar receita aos favoritos" aria-pressed="false">♡</button>
+      <button id="compartilhar" type="button" aria-label="Compartilhar esta receita">↗</button>
     </section>
 
     <section class="busca">
+      <!-- Label acessível escondido apenas visualmente -->
+      <label for="busca" class="sr-only">Buscar receitas por nome</label>
       <input id="busca" type="search" placeholder="Digite uma receita">
-      <button id="buscar" type="button">🔍</button>
+      <button id="buscar" type="button" aria-label="Iniciar busca">🔍</button>
     </section>
 
     <p id="mensagem" class="mensagem" role="status"></p>
